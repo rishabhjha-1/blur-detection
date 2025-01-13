@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import * as tf from '@tensorflow/tfjs';
+// import * as tf from '@tensorflow/tfjs';
 import * as cocossd from '@tensorflow-models/coco-ssd';
 import { Camera } from 'react-camera-pro';
 

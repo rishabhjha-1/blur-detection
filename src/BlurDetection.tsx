@@ -41,7 +41,7 @@ async function detectBlur(imageElement: HTMLImageElement): Promise<boolean> {
 
 // Component
 const BlurDetection: React.FC = () => {
-  const [images, setImages] = useState<File[]>([]);
+  // const [images, setImages] = useState<File[]>([]);
   const [report, setReport] = useState<{ name: string; isBlurred: boolean }[]>([]);
   const [progress, setProgress] = useState<number>(0);
 
@@ -49,8 +49,8 @@ const BlurDetection: React.FC = () => {
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) return;
 
-    const files = Array.from(event.target.files).slice(0, 10);
-    setImages(files);
+    const files = Array.from(event.target.files).slice(0, 100);
+    // setImages(files);
 
     const results: { name: string; isBlurred: boolean }[] = [];
 
