@@ -1,15 +1,17 @@
-import './App.css'
-import BlurDetection from './BlurDetection'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+import BlurDetection from './BlurDetection';
+import Camera  from './Camera';
 
+const App = () => {
   return (
-    <>
-      <div>
-        <BlurDetection/>
-      </div>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<BlurDetection />} />
+        <Route path="/camera" element={<Camera />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
